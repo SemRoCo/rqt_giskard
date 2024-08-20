@@ -47,7 +47,7 @@ import termcolor
 import uuid_msgs.msg as uuid_msgs
 
 from giskard_msgs.msg import ExecutionState
-from giskardpy.tree.behaviors.plot_task_graph import execution_state_to_dot_graph
+from giskardpy.tree.behaviors.plot_motion_graph import execution_state_to_dot_graph
 from . import visibility
 
 from .dotcode_behaviour import RosBehaviourTreeDotcodeGenerator
