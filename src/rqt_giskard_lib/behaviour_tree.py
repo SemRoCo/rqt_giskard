@@ -47,12 +47,12 @@ import termcolor
 import uuid_msgs.msg as uuid_msgs
 
 from giskard_msgs.msg import ExecutionState
-from giskardpy.tree.behaviors.plot_motion_graph import execution_state_to_dot_graph
 from . import visibility
 
 from .dotcode_behaviour import RosBehaviourTreeDotcodeGenerator
 from .dynamic_timeline import DynamicTimeline
 from .dynamic_timeline_listener import DynamicTimelineListener
+from .plot_giskard import execution_state_to_dot_graph
 from .timeline_listener import TimelineListener
 from .qt_dotgraph.dot_to_qt import DotToQtGenerator
 from .qt_dotgraph.pygraphvizfactory import PygraphvizFactory
@@ -68,6 +68,7 @@ try:  # indigo
     from python_qt_binding.QtGui import QFileDialog, QGraphicsView, QGraphicsScene, QWidget, QShortcut
 except ImportError:  # kinetic+ (pyqt5)
     from python_qt_binding.QtWidgets import QFileDialog, QGraphicsView, QGraphicsScene, QWidget, QShortcut
+
 
 
 class RosBehaviourTree(QObject):
